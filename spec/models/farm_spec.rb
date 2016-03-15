@@ -6,6 +6,13 @@ RSpec.describe Farm, type: :model do
 
   describe 'associations' do
     it { is_expected.to have_many(:users) }
+    it { is_expected.to have_and_belong_to_many(:products) }
+  end
+
+  describe 'validations' do
+    it { is_expected.to validate_presence_of(:name) }
+    it { is_expected.to validate_presence_of(:location) }
+    it { is_expected.to validate_presence_of(:description) }
   end
 
   describe '.default scope' do
