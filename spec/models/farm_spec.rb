@@ -7,6 +7,7 @@ RSpec.describe Farm, type: :model do
   describe 'associations' do
     it { is_expected.to have_many(:users) }
     it { is_expected.to have_and_belong_to_many(:products) }
+    it { is_expected.to belong_to(:position) }
   end
 
   describe 'validations' do
