@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: Farmstand_development
+
+test: &test
+  <<: *default
+  database: Farmstand_test
+
+production:
+  <<: *default
+  database: Farmstand_production
+  username: Farmstand
+  password: <%= ENV['Farmstand_DATABASE_PASSWORD'] %>
+
+cucumber:
+  <<: *test
