@@ -1,0 +1,11 @@
+.container
+  h1 Farm: #{@farm.name}
+	p Location: #{@farm.location}
+  p Website: #{@farm.website} 
+  p Description: #{@farm.description}
+  h3 Farmers 
+  - @farm.users.each do |user| 
+    p Name: #{user.name} 
+    p Bio: #{user.bio}
+  p = link_to 'Edit', edit_farm_path 
+  p = link_to 'Back', farms_path 

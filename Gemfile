@@ -26,7 +26,9 @@ gem 'devise'
 # Use simple_form to simplify form views
 gem 'simple_form'
 # Use bootstrap for front-end styles
-gem 'bootstrap-sass', '~> 3.3.6' 
+gem 'bootstrap-sass', '~> 3.3.6'
+# Use slim for cleaner HTML
+gem 'slim-rails'
 
 group :development, :test do
   # Use faker to auto populate seed data

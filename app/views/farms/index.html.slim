@@ -1,0 +1,13 @@
+.container
+  h1 All Farms
+  - @farms.each do |farm| 
+    h2 Farm: #{farm.name}
+  	p Location: #{farm.location} 
+    p Website: #{farm.website}
+    p Description: #{farm.description} 
+    h3 Farmers 
+    - farm.users.each do |user|
+      p Name: #{user.name} 
+      p Bio: #{user.bio} 
+      p = link_to "View User", user 
+    p = link_to "View Farm", farm 

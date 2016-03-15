@@ -1,0 +1,19 @@
+.container
+  = simple_form_for(@farm) do |form| 
+    - if @farm.errors.any? 
+      #error_explanation
+        h2 = "#{pluralize(@farm.errors.count, "error")} prohibited this farm from being saved:"
+        ul
+          - @farm.errors.full_messages.each do |message| 
+          li = message
+  
+    .field
+      = form.input :name 
+    .field
+      = form.input :location
+    .field
+      = form.input :website   
+    .field
+      = form.input :description
+    .actions
+      = form.submit
