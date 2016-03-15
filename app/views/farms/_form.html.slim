@@ -15,5 +15,7 @@
       = form.input :website   
     .field
       = form.input :description
+    .field
+      = form.input :position, collection: Position.all
     .actions
       = form.submit

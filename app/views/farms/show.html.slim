@@ -3,6 +3,7 @@
 	p Location: #{@farm.location}
   p Website: #{@farm.website} 
   p Description: #{@farm.description}
+  p Position: #{@farm.position.id}
   h3 Farmers 
   - @farm.users.each do |user| 
     p Name: #{user.name} 
