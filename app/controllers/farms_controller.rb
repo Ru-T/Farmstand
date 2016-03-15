@@ -1,9 +1,13 @@
 class FarmsController < ApplicationController
-  before_action :set_farm, only: [:show, :edit, :update]
+  before_action :set_farm, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!
 
   def index
     @farms = Farm.all
+  end
+
+  def new
+    @farm = Farm.new
   end
 
   def update

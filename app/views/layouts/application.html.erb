@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="container">
+    <% if current_admin %>
+      <%= link_to "Farms", farms_path %>
+      <%= link_to "New Farm", new_farm_path %>
+      <%= link_to "Log Out", destroy_admin_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Log In", new_admin_session_path %>
+    <% end %>
+  </div>
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
 <%= yield %>
-
 </body>
-</html>
