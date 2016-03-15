@@ -9,5 +9,9 @@
     - farm.users.each do |user|
       p Name: #{user.name} 
       p Bio: #{user.bio} 
-      p = link_to "View User", user 
+      p = link_to "View Farmer", user 
+    h3 Products 
+    - farm.products.each do |product|
+      p Name: #{product.name} 
+      p Description: #{product.description} 
     p = link_to "View Farm", farm 
