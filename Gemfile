@@ -21,10 +21,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 # Use Taperole for deployment
 gem 'taperole'
-# User devise for admin authentication
+# Use devise for admin authentication
 gem 'devise'
-# User simple_form to simplify form views
+# Use simple_form to simplify form views
 gem 'simple_form'
+# Use bootstrap for front-end styles
+gem 'bootstrap-sass', '~> 3.3.6' 
 
 group :development, :test do
   # Use faker to auto populate seed data
