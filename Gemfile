@@ -21,11 +21,20 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 # Use Taperole for deployment
 gem 'taperole'
+# Use devise for admin authentication
 gem 'devise'
+# Use simple_form to simplify form views
+gem 'simple_form'
+# Use bootstrap for front-end styles
+gem 'bootstrap-sass', '~> 3.3.6'
+# Use slim for cleaner HTML
+gem 'slim-rails'
 
 group :development, :test do
+  # Use faker to auto populate seed data
+  gem 'faker'
   # Use cucumber-rails for automated feature tests
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
   # Use capybara-rails to simulate how a user interacts with the app
   gem 'capybara'
   # Use rspec as the testing framework
