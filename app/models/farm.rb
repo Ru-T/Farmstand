@@ -4,6 +4,7 @@ class Farm < ActiveRecord::Base
   belongs_to :position
 
   validates_presence_of :name, :location, :description
+  validates_uniqueness_of :position_id
 
   default_scope { order(name: :asc) }
 end
