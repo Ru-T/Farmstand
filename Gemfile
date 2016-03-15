@@ -24,8 +24,10 @@ gem 'taperole'
 gem 'devise'
 
 group :development, :test do
+  # Use faker to auto populate seed data
+  gem 'faker'
   # Use cucumber-rails for automated feature tests
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
   # Use capybara-rails to simulate how a user interacts with the app
   gem 'capybara'
   # Use rspec as the testing framework

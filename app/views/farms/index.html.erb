@@ -1,0 +1,16 @@
+<div class="container">
+
+  <h1>All Farms </h1>
+
+  <% @farms.each do |farm| %>
+  	<h2> Farm: <%= farm.name %> </h2>
+  	<p> Location: <%= farm.location %> </p>
+    <p> Website: <%= farm.website %> </p>
+    <p> Description: <%= farm.description %> </p>
+    <h3> Farmers </h3>
+    <% farm.users.each do |user| %>
+      <p> Name: <%= user.name %> </p>
+      <p> Bio: <%= user.bio %> </p>
+    <% end %>
+  <% end %>
+</div>
