@@ -1,7 +1,8 @@
 20.times do
-  Position.create!(name: Faker::Lorem.sentence,
-                   permanent: [true, false].sample
-                   )
+  Position.create!(
+    name: Faker::Lorem.sentence,
+    permanent: [true, false].sample
+  )
 end
 
 30.times do
@@ -11,7 +12,6 @@ end
   )
 end
 
-id = 0
 20.times do |id|
   Farm.create!(
     name: Faker::Company.name,
