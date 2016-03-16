@@ -30,7 +30,8 @@ class FarmsController < ApplicationController
       :name,
       :location,
       :website,
-      :description
+      :description,
+      :avatar
     )
   end
 end

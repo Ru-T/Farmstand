@@ -2,6 +2,10 @@
   h1 All Farms
   - @farms.each do |farm| 
     h2 Farm: #{farm.name}
+    p = link_to "View Farm", farm
+    p = link_to "Edit Farm", edit_farm_path(farm)
+    p Position: #{farm.position.id}
+    = image_tag(farm.avatar_url(:thumb)) if farm.avatar?
   	p Location: #{farm.location} 
     p Website: #{farm.website}
     p Description: #{farm.description} 
@@ -14,4 +18,3 @@
     - farm.products.each do |product|
       p Name: #{product.name} 
       p Description: #{product.description} 
-    p = link_to "View Farm", farm 
