@@ -3,6 +3,7 @@
 	p Location: #{@farm.location}
   p Website: #{@farm.website} 
   p Description: #{@farm.description}
+  = image_tag(@farm.avatar_url(:thumb)) if @farm.avatar?
   p Position: #{@farm.position.id}
   h3 Farmers 
   - @farm.users.each do |user| 

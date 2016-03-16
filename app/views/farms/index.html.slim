@@ -5,7 +5,7 @@
     p = link_to "View Farm", farm
     p = link_to "Edit Farm", edit_farm_path(farm)
     p Position: #{farm.position.id}
-    
+    = image_tag(farm.avatar_url(:thumb)) if farm.avatar?
   	p Location: #{farm.location} 
     p Website: #{farm.website}
     p Description: #{farm.description} 

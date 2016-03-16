@@ -29,6 +29,9 @@ gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.6'
 # Use slim for cleaner HTML
 gem 'slim-rails'
+# Use carrierwave for image uploads
+gem 'carrierwave'
+gem 'rmagick'
 
 group :development, :test do
   # Use faker to auto populate seed data

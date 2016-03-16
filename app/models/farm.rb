@@ -6,5 +6,7 @@ class Farm < ActiveRecord::Base
   validates_presence_of :name, :location, :description
   validates_uniqueness_of :position_id
 
+  mount_uploader :avatar, AvatarUploader
+
   default_scope { order(name: :asc) }
 end

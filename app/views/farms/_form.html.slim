@@ -15,6 +15,11 @@
       = form.input :website   
     .field
       = form.input :description
+    .field  
+      = form.label :avatar
+      = image_tag(@farm.avatar_url) if @farm.avatar? 
+      = form.file_field :avatar 
+      = form.hidden_field :avatar_cache 
     .field
       = form.input :position, collection: Position.all
     .actions
