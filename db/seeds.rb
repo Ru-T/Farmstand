@@ -4,6 +4,13 @@
                    )
 end
 
+30.times do
+  Product.create!(
+    name: Faker::Commerce.color,
+    description: Faker::Lorem.paragraph
+  )
+end
+
 id = 0
 20.times do |id|
   Farm.create!(
@@ -13,6 +20,10 @@ id = 0
     description: Faker::Lorem.paragraph,
     position_id: id + 1
   )
+end
+
+Farm.all.each do |farm|
+  farm.products << Product.find(rand(1...20))
 end
 
 30.times do

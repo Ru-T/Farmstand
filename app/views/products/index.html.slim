@@ -1,0 +1,8 @@
+.container
+  h1 All Products
+  - @products.each do |product| 
+    p Product: #{product.name}
+    p Product: #{product.description}
+    = image_tag(product.avatar_url(:thumb)) if product.avatar?
+    p = link_to "Edit Product", edit_product_path(product)
+    

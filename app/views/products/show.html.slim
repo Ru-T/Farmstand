@@ -1,0 +1,4 @@
+.container
+  h1 Product: #{@product.name}
+  p Description: #{@product.description}
+  = image_tag(@product.avatar_url(:thumb)) if @product.avatar?
